@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validando Formulario</title>
+</head>
+<body>
+	
+	<h4>Validando Formularios<h4>
+<form action="" name="formulario" method="get">
+
+<input type="text" name="nombre" maxlength="30" placeholder="Nombre">
+<br>
+<p>Sexo<p>
+<input type="radio" name="sexo" id="Mujer"  value="Mujer">Mujer
+<input type="radio" name="sexo" id="Hombre" value="Hombre">Hombre
+<br>
+<input type="checkbox" name="terminos" id="terminos">Terminos y Condiciones
+<br>
+
+<input type="submit" name="btn" id="btn" value="Enviar">
+</form>
+
+
+<script type="text/javascript">
+	(function(){
+
+var formulario = document.getElementsByName("formulario")[0],
+	elementos  = formulario.elements,
+	boton      = document.getElementById("btn");
+
+function validarNombre(e){
+
+if(formulario.nombre.value == 0){
+	alert("El campo Nombre esta vacio");
+	e.preventDefault();
+}
+}
+
+	function validarRadio(e){
+if(formulario.sexo[0].checked == true  || formulario.sexo[1].checked == true){
+
+}else{
+	alert("Completa el campo sexo");
+	e.preventDefault();
+}
+}
+
+function validarTerminos(e){
+	if(formulario.terminos.checked == false){
+	alert("Acepta los terminos");
+	e.preventDefault();
+	}
+}
+
+	function validar(e){
+		validarNombre(e);
+		validarRadio(e);
+		validarTerminos(e);
+	}
+
+	formulario.addEventListener("submit", validar)
+
+	}())
+
+
+
+</script>
+
+</body>
+</html>

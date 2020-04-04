@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Atributos DOM</title>
+</head>
+<style>
+       div{
+       width: 300px;
+       height:300px;
+       background: #dddddd;
+       display: inline-block;
+       margin-right: 10px;
+       border: 1px solid #AAAAAA;
+       }
+  .azul {
+     background: #0074D9;
+     border: 1px solid #000;
+  }
+
+  .rojo {
+    background: #FF4136;
+    border: 1px solid #000;
+  }
+
+</style>
+
+<body>
+<section id="contenedor">
+  <a href="https://atom.io/packages/emmet-simplified" id="enlace">Enlace de esmelyn</a>
+  <div class=""></div>
+  <div class=""></div>
+</section>
+<script type="text/javascript">
+  var elemento = document.createElement("div");
+  let padre = document.getElementById("contenedor");
+  let referencia = document.getElementsByTagName("div")[0];
+  elemento.setAttribute("class", "rojo");
+  padre.insertBefore(elemento, referencia);
+
+
+</script>
+
+</body>
+</html>

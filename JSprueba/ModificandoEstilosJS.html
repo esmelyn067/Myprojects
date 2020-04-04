@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modificando Estilos de los Elementos</title>
+</head>
+  <style>
+       .thumb{
+         width: 200px;
+         transition: 300ms all ease;
+       }
+        .grande{
+          width: 400px;
+        }
+   </style>
+
+<body>
+
+
+    <img id="thumb" class="thumb" src="http://lorempixel.com/400/400/" width="400" alt="">
+	<form action="">
+	<input type="button" value="Cambio de Tamano" onclick = "zoom();">
+	</form>
+  
+	
+
+  <script type="text/javascript">
+  function zoom(){
+var thumb = document.getElementById("thumb");
+if(thumb.className=="thumb"){
+thumb.className="thumb grande";
+}else{thumb.className="thumb";}
+}
+
+  </script>
+
+</body>
+</html>

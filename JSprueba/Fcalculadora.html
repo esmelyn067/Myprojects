@@ -1,0 +1,24 @@
+<Doctype! Html5>
+<Html lang ="es">
+    <head>
+    <meta charset="UTF-8">
+<title>Funciones</title>   
+</head>
+<body>
+<form action="">
+    <input type="text" id= "numero1">
+    <input type="text" id= "numero2">
+    <input type="button" value="sumar"  onclick= "alert(suma());">
+</form>
+    
+<script>
+var suma = function(){
+
+var  numero1 = parseFloat(document.getElementById("numero1").value);
+var  numero2 = parseFloat(document.getElementById("numero2").value);
+var resultado = numero1 + numero2;
+return resultado;
+}
+</script>
+</body>
+</Html>
